@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "completed": [
+    "A1",
+    "A0",
+    "withheld_A1",
+    "withheld_A0",
+    "contextdep",
+    "rerun30",
+    "counterfactual",
+    "financebench",
+    "oracle"
+  ],
+  "cut": [],
+  "attempted_items": 2900,
+  "generation_requests": 2900,
+  "generation_errors": 0,
+  "wall_seconds": 17413.20052933693
+}
