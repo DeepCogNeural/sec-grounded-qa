@@ -1,10 +1,10 @@
 # Grounded QA over SEC filings
 
-**On 150 constructed figure-removal probes, A1 (extract-and-compute) declined 84.7%; A0 (direct answering) declined 87.3%. A1’s matched retrieval-score gate declined 67.3%.** Probe validation is a bounded numeric check, not proof of unanswerability. On the same 922 questions and evidence, A1 scored 45.1% versus A0’s 47.9%; the FinQA scorer reversed the ranking. These are the headline and null result selected by rules frozen before test generation.
+**Headline (pre-registered, passed).** We removed the evidence holding the needed figures from 150 questions (withheld probes). The extract-and-compute pipeline (A1) declined 84.7% of them; a retrieval-score cutoff matched to A1's answer rate on ordinary questions declined 67.3%. The frozen rule required a 10-point advantage; A1's was 17.4. Direct answering (A0) declined 87.3% and also passed. Both were told to decline when a required number is missing, so the declines measure instruction-following under constructed omission; the matched cutoff supplies the comparison.
 
-Post hoc, descriptive scorer disagreement: NumMatch-1% vs FinQA flips on 91/922 A1 and 133/922 A0 items; 77/91 of the A1 flips are percent-type predictions.
+**Null.** On all 922 DocFinQA test questions, A1 scored 45.1% and A0 47.9%; the FinQA scorer reverses the sign, so the frozen rule names no winner.
 
-Both arms were instructed to abstain only when a required number was missing, not merely because arithmetic or unit conversion was needed. On the main set, “unjustified” abstentions with all gold figures numerically present were A1 117/922 = 12.7% and A0 128/922 = 13.9% of all questions. The gate above matches A1’s main-set non-refusal coverage.
+Both results were chosen by rules frozen before any test answers were generated.
 
 **Question:** Does extracting financial figures and computing in code improve on answering directly, and can evidence checks select reliable answers?
 
